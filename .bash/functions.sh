@@ -117,6 +117,7 @@ gmtbuild() {
           -D DCW_ROOT=$GMT_DATA_PREFIX \
           -D GSHHG_ROOT=$GMT_DATA_PREFIX \
           -D GMT_INSTALL_MODULE_LINKS:BOOL=FALSE \
+          -D CMAKE_BUILD_TYPE=Debug \
           ..
     echo ""
     echo "Build and install"
