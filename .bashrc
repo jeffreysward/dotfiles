@@ -23,21 +23,26 @@ if [ -f $HOME/.travis/travis.sh ]; then
     source $HOME/.travis/travis.sh
 fi
 
-# Start ssh-agent automatically if it hasn't been started alredy
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > ~/.ssh-agent-thing
-fi
-if [[ "$SSH_AGENT_PID" == "" ]]; then
-    eval "$(<~/.ssh-agent-thing)" > /dev/null
-fi
-
 # Setup and activate the conda package manager
-if [ -f $HOME/miniconda3/etc/profile.d/conda.sh ]; then
-    source "$HOME/miniconda3/etc/profile.d/conda.sh"
-    conda activate
+#if [ -f $HOME/miniconda3/etc/profile.d/conda.sh ]; then
+#    source "$HOME/anaconda3/etc/profile.d/conda.sh"
+#    conda activate
+#fi
+
+ __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
 fi
+unset __conda_setup
+
 # Activate my default environment to keep the base env clean
-cenv $HOME/environment.yml
+conda activate optwrf
 
 # If pyjoke is installed, start the terminal with a random joke. Because why not?
 if hash pyjoke 2>/dev/null; then

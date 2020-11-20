@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins are downloaded from Github (username/repo)
 
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
@@ -20,12 +20,12 @@ Plug 'tweekmonster/braceless.vim', {'for': ['python']}
 Plug 'vim-syntastic/syntastic'
 
 if has('nvim')
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	Plug 'zchee/deoplete-jedi'
+	" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	" Plug 'zchee/deoplete-jedi'
 else
-	Plug 'Shougo/deoplete.nvim'
+	" Plug 'Shougo/deoplete.nvim'
 	Plug 'roxma/nvim-yarp'
-	Plug 'roxma/vim-hug-neovim-rpc'
+	" Plug 'roxma/vim-hug-neovim-rpc'
 	Plug 'davidhalter/jedi-vim'
 endif
 
