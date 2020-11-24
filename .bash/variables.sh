@@ -7,7 +7,7 @@ fi
 
 export EDITOR=vim
 
-export CONDA_PREFIX=$HOME/miniconda3
+export CONDA_PREFIX=$HOME/conda
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/pkg/lib64
 

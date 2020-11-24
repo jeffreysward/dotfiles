@@ -44,6 +44,12 @@ unset __conda_setup
 # Activate my default environment to keep the base env clean
 conda activate optwrf
 
+# Move things in ~/Downloads to the Trash if they are more than a week old
+find ~/Downloads/ -type f -mtime +7 -exec mv {} ~/.Trash \;
+
+# Delete things in the trash that are more than a month old
+find ~/.Trash/ -type f -mtime +30 -exec rm {} \;
+
 # If pyjoke is installed, start the terminal with a random joke. Because why not?
 if hash pyjoke 2>/dev/null; then
     printf "... $(pyjoke) 🥁\n"
