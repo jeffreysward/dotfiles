@@ -30,4 +30,5 @@ kdenlive
 Zotero
 virtualbox-vms/
 pgeocode_data/
+seaborn-data/
 *.log
