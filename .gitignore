@@ -32,3 +32,4 @@ virtualbox-vms/
 pgeocode_data/
 seaborn-data/
 *.log
+gurobi.lic
