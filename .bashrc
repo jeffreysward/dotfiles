@@ -42,7 +42,7 @@ fi
 unset __conda_setup
 
 # Activate my default environment to keep the base env clean
-conda activate optwrf
+conda activate oshwind
 
 # Move things in ~/Downloads to the Trash if they are more than a week old
 find ~/Downloads/ -type f -mtime +7 -exec mv {} ~/.Trash \;
