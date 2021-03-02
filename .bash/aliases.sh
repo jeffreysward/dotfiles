@@ -42,8 +42,8 @@ alias magmavis='ssh -X jas983@en-ma-mzhang-vis01.coecis.cornell.edu'
 alias ncar='ssh -X -l sward cheyenne.ucar.edu'
 alias gis='git status'
 alias ga='git add --all :/'
-alias gpush='git push origin master'
-alias gpull='git pull origin master'
+alias gpush='git push origin main'
+alias gpull='git pull origin main'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
